@@ -278,6 +278,7 @@ nav ul {
 .project-showcase {
     display: grid;
     grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
     align-items: center;
     gap: 16px;
 }
@@ -354,12 +355,14 @@ nav ul {
 #project a {
     display: block;
     text-align: center;
+    margin-top: 16px;
 }
 
 .project-card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: subgrid;
     gap: 16px;
+    grid-row: span 2;
 }
 
 /* quoteRequest */
