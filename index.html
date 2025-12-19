@@ -7,9 +7,55 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <dialog>
+        <div class="quoteRequest">
+            <form action="post">
+                <button id="closeBtn">x</button>
+                <label for="header-name">İsim:</label>
+                <input id="header-name" type="text" required>
+                <label for="header-telNo">Telefon:</label>
+                <input id="header-telNo" type="tel" required>
+                <label for="header-email">E-mail:</label>
+                <input type="email" id="header-email">
+                <label for="header-service">Hizmet:</label>
+                <select name="service" id="header-service">
+                    <option value="ev-tadilat">Ev tadilatı</option>
+                    <option value="mutfa-tadilat">Mutfak tadilatı</option>
+                    <option value="banyo-tadilat">Banyo yenileme</option>
+                    <option value="ofis-tadilat">Ofis tadilatı</option>
+                    <option value="alcipan-asmaTavan">Alçıpan & asma tavan</option>
+                    <option value="boya-badana">Boya & badana</option>
+                    <option value="zemin-kaplama">Zemin kaplama</option>
+                    <option value="seramik-fayans">Seramik & fayans</option>
+                    <option value="elektrik-aydınlatma">Elektrik & aydınlatma</option>
+                    <option value="su-tesisatı">Su tesisatı</option>
+                    <option value="ic-dekorasyon">İç dekorasyon</option>
+                    <option value="ozel-tasrım-uyg">Özel tasarım uygulamalar</option>
+                </select>
+                <label for="header-semt">Semt:</label>
+                <select name="semt" id="header-semt">
+                    <option value="besiktas">Beşiktaş</option>
+                    <option value="beyoglu">Beyoğlu</option>
+                    <option value="sariyer">Sarıyer</option>
+                    <option value="sisli">Şişli</option>
+                    <option value="fatih">Fatih</option>
+                    <option value="bakirkoy">Bakırköy</option>
+                    <option value="kadikoy">Kadıköy</option>
+                    <option value="beykoz">Beykoz</option>
+                    <option value="uskudar">Üsküdar</option>
+                    <option value="atasehir">Ataşehir</option>
+                    <option value="umraniye">Ümraniye</option>
+                    <option value="maltepe">Maltepe</option>
+                </select>
+                <label for="header-message">Mesaj:</label>
+                <textarea name="message" id="header-message" rows="7" placeholder="İsteklerinizi, merak ettiklerinizi, aklınızdakileri buraya yazabilirsiniz."></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </dialog>
     <header>
         <div id="contact">
-            <span id="telMail">
+            <span id="address">
                 <a href="tel:+901736163"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>0123 456 7890</a>
                 <a href="href=mailto:info@example.com"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>info@example.com</a>
                 <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>İstanbul</a>
@@ -20,249 +66,274 @@
                 <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg></a>
             </span>
         </div>
+        <hr>
         <div id="logoNavCta">
-            <a href="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg>
-                <strong>Özcan</strong>
-                <span>Tadilat & Dekorasyon</span>
+            <a id="logo" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="logoSvg"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg>
+                <strong>Özcanlar</strong>
             </a>
             <nav>
                 <ul>
-                    <li><a href="">Ana sayfa</a></li>
-                    <li><a href="">Hakkımızda</a></li>
-                    <li><a href="">Hizmetlerimiz</a></li>
-                    <li><a href="">Projeler</a></li>
+                    <li><a href="">ANA SAYFA</a></li>
+                    <li><a href="">HAKKIMIZDA</a></li>
+                    <li><a href="">HİZMETLERİMİZ</a></li>
+                    <li><a href="">PROJELER</a></li>
                     <li title="Sık sorulan sorular"><a href="">S.S.S</a></li>
-                    <li><a href=""><strong>İletişim</strong></a></li>
+                    <li><a href=""><strong>İLETİŞİM</strong></a></li>
                 </ul>
             </nav>
             <button id="ctaButton"><strong>Ücretsiz Keşif Al</strong></button>
-            <dialog>
-                <form class="quoteRequest" action="post">
-                    <button id="closeBtn">x</button>
-                    <label for="header-name">İsim:</label>
-                    <input id="header-name" type="text" required>
-                    <label for="header-telNo">Telefon:</label>
-                    <input id="header-telNo" type="tel" required>
-                    <label for="header-email">E-mail:</label>
-                    <input type="email" id="header-email">
-                    <label for="header-service">Hizmet:</label>
-                    <select name="service" id="header-service">
-                        <option value="ev-tadilat">Ev tadilatı</option>
-                        <option value="mutfa-tadilat">Mutfak tadilatı</option>
-                        <option value="banyo-tadilat">Banyo yenileme</option>
-                        <option value="ofis-tadilat">Ofis tadilatı</option>
-                        <option value="alcipan-asmaTavan">Alçıpan & asma tavan</option>
-                        <option value="boya-badana">Boya & badana</option>
-                        <option value="zemin-kaplama">Zemin kaplama</option>
-                        <option value="seramik-fayans">Seramik & fayans</option>
-                        <option value="elektrik-aydınlatma">Elektrik & aydınlatma</option>
-                        <option value="su-tesisatı">Su tesisatı</option>
-                        <option value="ic-dekorasyon">İç dekorasyon</option>
-                        <option value="ozel-tasrım-uyg">Özel tasarım uygulamalar</option>
-                    </select>
-                    <label for="header-semt">Semt:</label>
-                    <select name="semt" id="header-semt">
-                        <option value="besiktas">Beşiktaş</option>
-                        <option value="beyoglu">Beyoğlu</option>
-                        <option value="sariyer">Sarıyer</option>
-                        <option value="sisli">Şişli</option>
-                        <option value="fatih">Fatih</option>
-                        <option value="bakirkoy">Bakırköy</option>
-                        <option value="kadikoy">Kadıköy</option>
-                        <option value="beykoz">Beykoz</option>
-                        <option value="uskudar">Üsküdar</option>
-                        <option value="atasehir">Ataşehir</option>
-                        <option value="umraniye">Ümraniye</option>
-                        <option value="maltepe">Maltepe</option>
-                    </select>
-                    <label for="header-message">Mesaj:</label>
-                    <textarea name="message" id="header-message"  placeholder="İsteklerinizi, merak ettiklerinizi, aklınızdakileri buraya yazabilirsiniz."></textarea>
-                    <button type="submit">Gönder</button>
-                </form>           
-            </dialog>
         </div>
     </header>
-    <hr>
     <main>
-        <article id="hero">
+        <section id="hero">
             <h1>Anahtar Teslim Tadilat & Dekorasyon</h1>
             <p>Konut ve ticari alanlar için planlı, sözleşmeli ve garantili tadilat ve dekorasyon çözümleri sunuyoruz.</p>
             <button>Ücretsiz Keşif Al</button>
-            <nav>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
-                    <figcaption>Bizi tanıyın</figcaption>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-drill-icon lucide-drill"><path d="M10 18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a3 3 0 0 1-3-3 1 1 0 0 1 1-1z"/><path d="M13 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1l-.81 3.242a1 1 0 0 1-.97.758H8"/><path d="M14 4h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3"/><path d="M18 6h4"/><path d="m5 10-2 8"/><path d="m7 18 2-8"/></svg>
-                    <figcaption>Ne yapıyoruz?</figcaption>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-images-icon lucide-images"><path d="m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16"/><path d="M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2"/><circle cx="13" cy="7" r="1" fill="currentColor"/><rect x="8" y="2" width="14" height="14" rx="2"/></svg>
-                    <figcaption>Örnek projeler</figcaption>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-                </figure>
-            </nav>
-        </article>
-        <hr>
-        <article id="about">
-            <h2>Bizi tanıyın</h2>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-plus-icon lucide-shield-plus"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>
-            <span>Alanında uzman ve deneyimli ekip</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-receipt-text-icon lucide-receipt-text"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg>
-            <span>Sözleşmeli ve şeffaf çalışma</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brick-wall-shield-icon lucide-brick-wall-shield"><path d="M12 9v1.258"/><path d="M16 3v5.46"/><path d="M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5z"/><path d="M3 15h7"/><path d="M3 9h12.142"/><path d="M8 15v6"/><path d="M8 3v6"/></svg>
-            <span>Birinci sınıf malzeme ve işçilik</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-check-icon lucide-clock-check"><path d="M12 6v6l4 2"/><path d="M22 12a10 10 0 1 0-11 9.95"/><path d="m22 16-5.5 5.5L14 19"/></svg>
-            <span>Zamanında teslim & memnuniyet garantisi</span>
-            <h3>4 Adımda Hizmet</h3>
-            <ol>
-                <li>Ücretsiz keşif ve ihtiyaç analizi</li>
-                <li>Tasarım, planlama ve net fiyatlandırma</li>
-                <li>Uygulama ve düzenli bilgilendirme</li>
-                <li>Anahtar teslim ve garanti süreci</li>
-            </ol>
-            <section id="references">
-                <h3>Müşterilerimiz ne diyor?</h3>
-                <div class="splide" aria-label="Müşteri Yorumları">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <article class="testimonial">
-                                    <strong>Banyo Tadilatı</strong>
-                                    <address>Ahmet Y. – Kadıköy</address>
-                                    <blockquote>Banyo tadilatımız söz verilen sürede ve temiz şekilde teslim edildi.</blockquote>
-                                </article>
-                            </li>
-                            <li class="splide__slide">
-                                <article class="testimonial">
-                                    <strong>Mutfak Yenileme</strong>
-                                    <address>Elif K. – Beşiktaş</address>
-                                    <blockquote>Süreç boyunca bilgilendirildik, sonuçtan çok memnun kaldık.</blockquote>
-                                </article>
-                            </li>
-                            <li class="splide__slide">
-                                <article class="testimonial">
-                                    <strong>Ofis Tadilatı</strong>
-                                    <address>Mehmet T. – Şişli</address>
-                                    <blockquote>Profesyonel ve güvenilir bir ekip, kesinlikle tavsiye ederim.</blockquote>
-                                </article>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        </section>
+        <section id="about">
+            <h2>Bizi Tanıyın</h2>
+            <section>
+                <article>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+                    <h3>Alanında uzman ekip</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus rem odit molestias!</p>
+                </article>
+                <article>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-receipt-text-icon lucide-receipt-text"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg>
+                    <h3>Sözleşmeli ve şeffaf çalışma</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad excepturi laudantium consequuntur.</p>
+                </article>
+                <article>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brick-wall-shield-icon lucide-brick-wall-shield"><path d="M12 9v1.258"/><path d="M16 3v5.46"/><path d="M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5z"/><path d="M3 15h7"/><path d="M3 9h12.142"/><path d="M8 15v6"/><path d="M8 3v6"/></svg>
+                    <h3>Birinci sınıf malzeme ve işçilik</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum inventore quia cumque.</p>
+                </article>
+                <article>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-check-icon lucide-clock-check"><path d="M12 6v6l4 2"/><path d="M22 12a10 10 0 1 0-11 9.95"/><path d="m22 16-5.5 5.5L14 19"/></svg>
+                    <h3>Zamanında teslim </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, expedita? Culpa, consequuntur!</p>
+                </article>
             </section>
-        </article>
+            <article id="process">
+                <h3>Nasıl Çalışıyoruz?</h3>
+                <ol id="process-steps">
+                    <li class="step" style="--col:1;--row:1">
+                        <article>
+                            <h4>Keşif & İhtiyaç Analizi</h4>
+                            <p>Alanı inceler, beklentilerinizi belirleriz.</p>
+                        </article>
+                    </li>
+                    <svg class="flow-arrow" style="--col:1;--row:2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 10 5 5-5 5"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/></svg>
+                    <li class="step" style="--col:2;--row:2">
+                        <article>
+                            <h4>Tasarım & Planlama</h4>
+                            <p>Uygulama planı ve bütçe oluşturulur.</p>
+                        </article>
+                    </li>
+                    <svg class="flow-arrow" style="--col:2;--row:3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 10 5 5-5 5"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/></svg>
+                    <li class="step" style="--col:3;--row:3">
+                        <article>
+                            <h4>Uygulama</h4>
+                            <p>Tadilat süreci başlar.</p>
+                        </article>
+                    </li>
+                    <svg class="flow-arrow" style="--col:3;--row:4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 10 5 5-5 5"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/></svg>
+                    <li class="step" style="--col:4;--row:4">
+                        <article>
+                            <h4>Teslim & Kontrol</h4>
+                            <p>Son kontroller sonrası teslim edilir.</p>
+                        </article>
+                    </li>
+                </ol>            
+            </article>
+            <article id="references">
+                <h3>Müşterilerimiz ne diyor?</h3>
+                <div id="splideTrack">
+                    <button class="nav prev">‹</button>
+                    <ul id="splideList">
+                        <li class="splideSlide">
+                            <article class="testimonial">
+                                <div class="profile">
+                                    <img src="" alt="profile" height="36px" width="36px">
+                                    <address>Ahmet Y. – Kadıköy</address>
+                                </div>
+                                <strong>Banyo Tadilatı</strong>
+                                <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam magni cumque tenetur doloribus! Veritatis, dicta.</blockquote>
+                            </article>
+                        </li>
+                        <li class="splideSlide">
+                            <article class="testimonial">
+                                <div class="profile">
+                                    <img src="" alt="profile" height="36px" width="36px">
+                                    <address>Elif K. – Beşiktaş</address>
+                                </div>
+                                <strong>Mutfak Yenileme</strong>
+                                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A minus, ab quae quasi nisi ratione consequatur nostrum, eius velit, officiis iure sapiente dolores! Cum maiores sunt odit veritatis doloribus culpa.</blockquote>
+                            </article>
+                        </li>
+                        <li class="splideSlide">
+                            <article class="testimonial">
+                                <div class="profile">
+                                    <img src="" alt="profile" height="36px" width="36px">
+                                    <address>Mehmet T. – Şişli</address>
+                                </div>
+                                <strong>Ofis Tadilatı</strong>
+                                <blockquote>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, aut consectetur neque harum placeat ad voluptate odit, fugit quis expedita minima eaque accusamus sed ducimus animi sit veniam cum et?</blockquote>
+                            </article>
+                        </li>
+                    </ul>
+                    <button class="nav next">›</button>
+                </div>
+            </article>
+        </section>
         <hr>
         <article id="services">
             <h2>Ne yapıyoruz?</h2>
-            <div id="figures">
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
-                    <figcaption>Ev Tadilatı</figcaption>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chef-hat-icon lucide-chef-hat"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>
-                    <figcaption>Mutfak Tadilatı</figcaption>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bath-icon lucide-bath"><path d="M10 4 8 6"/><path d="M17 19v2"/><path d="M2 12h20"/><path d="M7 19v2"/><path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/></svg>
-                    <figcaption>Banyo Yenileme</figcaption>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lamp-desk-icon lucide-lamp-desk"><path d="M10.293 2.293a1 1 0 0 1 1.414 0l2.5 2.5 5.994 1.227a1 1 0 0 1 .506 1.687l-7 7a1 1 0 0 1-1.687-.506l-1.227-5.994-2.5-2.5a1 1 0 0 1 0-1.414z"/><path d="m14.207 4.793-3.414 3.414"/><path d="M3 20a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="m9.086 6.5-4.793 4.793a1 1 0 0 0-.18 1.17L7 18"/></svg>
-                    <figcaption>Ofis Tadilatı</figcaption>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brick-wall-icon lucide-brick-wall"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 9v6"/><path d="M16 15v6"/><path d="M16 3v6"/><path d="M3 15h18"/><path d="M3 9h18"/><path d="M8 15v6"/><path d="M8 3v6"/></svg>
-                    <figcaption>Alçıpan & Asma Tavan</figcaption>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paint-roller-icon lucide-paint-roller"><rect width="16" height="6" x="2" y="2" rx="2"/><path d="M10 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect width="4" height="6" x="8" y="16" rx="1"/></svg>
-                    <figcaption>Boya & Badana</figcaption>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-icon lucide-layers"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>
-                    <figcaption>Zemin Kaplama</figcaption>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid3x2-icon lucide-grid-3x2"><path d="M15 3v18"/><path d="M3 12h18"/><path d="M9 3v18"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-                    <figcaption>Seramik & Fayans</figcaption>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plug-icon lucide-plug"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></svg>
-                    <figcaption>Elektrik & Aydınlatma</figcaption>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplet-icon lucide-droplet"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
-                    <figcaption>Su Tesisatı</figcaption>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair-icon lucide-armchair"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
-                    <figcaption>İç Dekorasyon</figcaption>
-                </figure>
-                <figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paintbrush-icon lucide-paintbrush"><path d="m14.622 17.897-10.68-2.913"/><path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"/><path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"/></svg>
-                    <figcaption>Özel Tasarım Uygulamalar</figcaption>
-                </figure>
+            <div id="servicesGrid">
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-drill-icon lucide-drill"><path d="M10 18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a3 3 0 0 1-3-3 1 1 0 0 1 1-1z"/><path d="M13 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1l-.81 3.242a1 1 0 0 1-.97.758H8"/><path d="M14 4h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3"/><path d="M18 6h4"/><path d="m5 10-2 8"/><path d="m7 18 2-8"/></svg>
+                        <figcaption>
+                            <strong>Ev Tadilatı</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis necessitatibus iure quo!</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chef-hat-icon lucide-chef-hat"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>
+                        <figcaption>
+                            <strong>Mutfak Tadilatı</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita at aliquam incidunt?</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bath-icon lucide-bath"><path d="M10 4 8 6"/><path d="M17 19v2"/><path d="M2 12h20"/><path d="M7 19v2"/><path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/></svg>
+                        <figcaption>
+                            <strong>Banyo Yenileme</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quos rerum asperiores!</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lamp-desk-icon lucide-lamp-desk"><path d="M10.293 2.293a1 1 0 0 1 1.414 0l2.5 2.5 5.994 1.227a1 1 0 0 1 .506 1.687l-7 7a1 1 0 0 1-1.687-.506l-1.227-5.994-2.5-2.5a1 1 0 0 1 0-1.414z"/><path d="m14.207 4.793-3.414 3.414"/><path d="M3 20a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="m9.086 6.5-4.793 4.793a1 1 0 0 0-.18 1.17L7 18"/></svg>
+                        <figcaption>
+                            <strong>Ofis Tadilatı</strong>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit provident excepturi voluptate.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brick-wall-icon lucide-brick-wall"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 9v6"/><path d="M16 15v6"/><path d="M16 3v6"/><path d="M3 15h18"/><path d="M3 9h18"/><path d="M8 15v6"/><path d="M8 3v6"/></svg>
+                        <figcaption>
+                            <strong>Alçıpan & Asma Tavan</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia recusandae corporis nesciunt?</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paint-roller-icon lucide-paint-roller"><rect width="16" height="6" x="2" y="2" rx="2"/><path d="M10 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect width="4" height="6" x="8" y="16" rx="1"/></svg>
+                        <figcaption>
+                            <strong>Boya & Badana</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis mollitia deleniti atque?</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-icon lucide-layers"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>
+                        <figcaption>
+                            <strong>Zemin Kaplama</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, repudiandae modi! Placeat!</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid3x2-icon lucide-grid-3x2"><path d="M15 3v18"/><path d="M3 12h18"/><path d="M9 3v18"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                        <figcaption>
+                            <strong>Seramik & Fayans</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iusto consectetur velit!</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plug-icon lucide-plug"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></svg>
+                        <figcaption>
+                            <strong>Elektrik & Aydınlatma</strong>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi vitae consectetur velit!</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplet-icon lucide-droplet"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+                        <figcaption>
+                            <strong>Su Tesisatı</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione fugit esse voluptate.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair-icon lucide-armchair"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
+                        <figcaption>
+                            <strong>İç Dekorasyon</strong>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eius facere error!</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paintbrush-icon lucide-paintbrush"><path d="m14.622 17.897-10.68-2.913"/><path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"/><path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"/></svg>
+                        <figcaption>
+                            <strong>Özel Tasarım Uygulamalar</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempore accusamus harum.</p>
+                        </figcaption>
+                    </figure>
+                </a>
             </div>
         </article>
         <hr>
-        <article id="projects">
+        <article id="project">
             <h2>Örnek projelerimiz</h2>
-            <figure>
-                <div class="before-after">
-                    <img src="before.jpg" alt="Before">
-                    <div class="after-wrapper">
-                        <img src="after.jpg" alt="After">
+            <div class="project-showcase">
+                <button class="nav prev">‹</button>
+                <figure class="project-card">
+                    <div class="project-media" aria-label="Banyo tadilatı öncesi ve sonrası görseli">
+                        <img src="images/ChatGPT Image Dec 19, 2025, 01_54_10 AM.png" alt="öncesi">
+                        <div class="after-wrapper">
+                            <img src="images/ChatGPT Image Dec 19, 2025, 01_56_35 AM.png" alt="sonrası">
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="slider">
                     </div>
-                    <input type="range" min="0" max="100" value="50" class="slider">
-                </div>
-                <figcaption><span>Komple Banyo Tadilatı</span><span>12 Gün</span><span>Eskiyen banyo tamamen yenilendi. Tesisat, seramik, dolap ve aydınlatma uygulamaları anahtar teslim olarak tamamlandı.</span></figcaption>
-            </figure>
-            <figure>
-                <div class="before-after">
-                    <img src="before.jpg" alt="Before">
-                    <div class="after-wrapper">
-                        <img src="after.jpg" alt="After">
-                    </div>
-                    <input type="range" min="0" max="100" value="50" class="slider">
-                </div>
-                <figcaption><span>Mutfak Yenileme</span><span>15 Gün</span><span>Mutfak dolapları, tezgâh, zemin ve aydınlatma yenilenerek modern ve kullanışlı bir alan oluşturuldu.</span></figcaption>
-            </figure>
-            <figure>
-                <div class="before-after">
-                    <img src="before.jpg" alt="Before">
-                    <div class="after-wrapper">
-                        <img src="after.jpg" alt="After">
-                    </div>
-                    <input type="range" min="0" max="100" value="50" class="slider">
-                </div>
-                <figcaption><span>Ofis Tadilatı</span><span>20 gün</span><span>Ofis alanı baştan sona yeniden planlandı. Bölme duvarlar, elektrik altyapısı ve zemin uygulamaları yapıldı.</span></figcaption>
-            </figure>
-            <figure>
-                <div class="before-after">
-                    <img src="before.jpg" alt="Before">
-                    <div class="after-wrapper">
-                        <img src="after.jpg" alt="After">
-                    </div>
-                    <input type="range" min="0" max="100" value="50" class="slider">
-                </div>
-                <figcaption><span>İç dekorasyon</span><span>7 gün</span><span>İç mekan baştan tasarlanarak şık ve kullanışlı bir yaşam alanı oluşturuldu.</span></figcaption>
-            </figure>
-            <button><a href="">Daha fazlasını görün</a></button>
+                    <figcaption><strong>Komple Banyo Tadilatı</strong><p>12 Gün<br>Eskiyen banyo tamamen yenilendi. Tesisat, seramik, dolap ve aydınlatma uygulamaları anahtar teslim olarak tamamlandı.</p></figcaption>
+                </figure>
+                <button class="nav next">›</button>
+            </div>
+            <a href="">Daha fazla proje için tıklayın</a>
+            <script>
+                document.querySelectorAll('.project-card').forEach(card => {
+                    const slider = card.querySelector('.slider');
+                    const after = card.querySelector('.after-wrapper');
+
+                    slider.addEventListener('input', e => {
+                        after.style.width = `${100 - e.target.value}%`;
+                    });
+                });
+            </script>
         </article>
         <hr>
-        <article id="faq">
-            <p>Tadilat süreci, süreler ve fiyatlandırma hakkında en çok merak edilen soruları Sık Sorulan Sorular bölümümüzde yanıtladık.</p><a href=""><button>S.S.S</button></a>
-            <p>Ya da doğrudan bizimle iletişime geçin.</p><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></a><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
-        </article>
-        <article id="cta">
-            <h2>Ücretsiz keşif alın</h2>
-            <form class="quoteRequest" action="post">
+        <article class="quoteRequest">
+            <form action="post">
+                <h2>Ücretsiz keşif alın</h2>
                 <label for="cta-name">İsim:</label>
                 <input id="cta-name" type="text" required>
                 <label for="cta-telNo">Telefon:</label>
@@ -299,7 +370,7 @@
                     <option value="maltepe">Maltepe</option>
                 </select>
                 <label for="cta-message">Mesaj:</label>
-                <textarea name="message" id="cta-message"  placeholder="İsteklerinizi, merak ettiklerinizi, aklınızdakileri buraya yazabilirsiniz."></textarea>
+                <textarea name="message" id="cta-message" rows="7" placeholder="İsteklerinizi, merak ettiklerinizi, aklınızdakileri buraya yazabilirsiniz."></textarea>
                 <button type="submit">Gönder</button>
             </form>
         </article>
