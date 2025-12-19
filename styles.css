@@ -33,9 +33,35 @@ ul {
     padding: 0;
 }
 
-/*header*/
+/* spacing */
+.container {
+    max-width: 1200px;
+    padding-inline: 16px;
+    margin-inline: auto;
+}
+
 header {
-    padding:8px;
+    padding-inline: clamp(16px, 4vw, 32px);
+}
+
+#contact, footer, #logoNavCta {
+    padding: 8px 0;
+}
+
+footer {
+    margin-top: 16px;
+}
+
+article.container {
+    margin-block: clamp(48px, 8vh, 96px);
+}
+
+#process, #references {
+    margin-block: clamp(36px, 6vh, 72px);
+}
+
+h2, #hero {
+    margin-bottom: 32px;
 }
 
 /* header contact */
@@ -70,6 +96,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.2rem;
 }
 
 #logo {
@@ -107,7 +134,8 @@ nav ul {
     background-image: url(images/pexels-monica-3562689.jpg);
     background-size: cover;
     color: white;
-    padding: 20vh 0;
+    padding-block: clamp(96px, 20vh, 180px);
+    padding-inline: clamp(16px, 5vw, 64px);
 }
 
 #hero > button {
@@ -125,6 +153,15 @@ nav ul {
     gap: 32px;
     text-align: center;
 }
+
+#about section article {
+    flex: 1;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 
 #about svg {
     height: 44px;
@@ -152,7 +189,7 @@ nav ul {
 
 .flow-arrow {
     grid-column: var(--col);
-    grid-row: var(--var);
+    grid-row: var(--row);
     justify-self: center;
 }
 
@@ -179,6 +216,9 @@ nav ul {
     border-radius: 16px;
     padding: 8px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .testimonial img {
@@ -214,13 +254,14 @@ nav ul {
 #servicesGrid {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap:32px;
+    gap:16px;
 }
 
 #servicesGrid figure {
     display: flex;
     gap:16px;
-    align-items: center;
+    height: 100%;
+    padding: 16px;
 }
 
 #servicesGrid figure svg {
@@ -315,6 +356,12 @@ nav ul {
     text-align: center;
 }
 
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 /* quoteRequest */
 
 .quoteRequest {
@@ -326,10 +373,14 @@ nav ul {
 form {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap:10px;
+    gap:12px;
 }
 
-.quoteRequest h2 {
+form textarea {
+    resize: vertical;
+}
+
+.quoteRequest h3 {
     text-align: center;
     grid-column: 2;
 }
