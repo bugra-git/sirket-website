@@ -22,6 +22,72 @@ input, button, textarea, select {
     font: inherit;
 }
 
+/* font */
+body {
+    font-family: inter, system-ui, sans-serif ;
+}
+
+@font-face {
+    font-family: inter;
+    src: url(Inter/Inter-VariableFont_opsz\,wght.ttf) format("woff2");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: inter;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(Inter/) format("woff2");
+}
+
+#logoNavCta nav a {
+    font-weight: 500;
+}
+
+button {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+#hero h1 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+#hero {
+    font-size: 1.2rem;
+}
+
+#hero p {
+    max-width: 50ch;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.33rem;
+}
+
+h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    max-width: 65ch;
+}
+
 /* links and lists */
 a {
     color: inherit;
@@ -352,6 +418,10 @@ nav ul {
     text-align: center;
 }
 
+.project-card figcaption p {
+    margin-inline: auto;
+}
+
 #project a {
     display: block;
     text-align: center;
@@ -394,8 +464,7 @@ form textarea {
 }
 
 .quoteRequest form label {
-    font-weight: bold;
-    font-style: italic;
+    font-weight: 600;
 }
 
 /* footer */
