@@ -101,17 +101,22 @@ ul {
 
 /* spacing */
 .container {
-    max-width: 1200px;
+    max-width: 1440px;
     padding-inline: 16px;
     margin-inline: auto;
 }
 
 header {
+    position: fixed;
+    width: 100%;
+}
+
+header > div {
     padding-inline: clamp(16px, 4vw, 32px);
 }
 
 #contact, footer, #logoNavCta {
-    padding: 8px 0;
+    padding-block: 8px;
 }
 
 footer {
@@ -337,15 +342,43 @@ nav ul {
 }
 
 /* project */
+
+#project {
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-columns: auto 1fr auto;
+}
+
 #project h2 {
     text-align: center;
+    grid-column: 1 / 4;
 }
 
 .project-showcase {
+    grid-row: 2 / 4;
+    grid-column: 1 / 4;
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto auto;
-    align-items: center;
+    grid-template: subgrid;
+    gap: 16px;
+}
+
+#project a {
+    grid-row: 4;
+    grid-column: 1 / 4;
+}
+
+.nav {
+    align-self: center;
+    justify-self: var(--pos);
+    grid-column: var(--col);
+}
+
+.project-card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
     gap: 16px;
 }
 
@@ -423,16 +456,8 @@ nav ul {
 }
 
 #project a {
-    display: block;
-    text-align: center;
+    margin-inline: auto;
     margin-top: 16px;
-}
-
-.project-card {
-    display: grid;
-    grid-template-rows: subgrid;
-    gap: 16px;
-    grid-row: span 2;
 }
 
 /* quoteRequest */
