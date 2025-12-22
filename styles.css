@@ -108,11 +108,17 @@ main {
     box-shadow: 0 4px 12px rgba(0,0,0,.1);
 }
 
-.container, .testimonial, #servicesGrid figure {
+.container {
     background-color: white;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,.1);
 }
+
+#about section article, #process, .testimonial, #servicesGrid figure {
+    background-color: var(--background);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+} 
 
 #logoNavCta {
     background-color: white;
@@ -182,6 +188,10 @@ article.container {
 
 #process, #references {
     margin-block: clamp(36px, 6vh, 72px);
+}
+
+#process {
+    padding:32px;
 }
 
 h2 {
@@ -330,7 +340,7 @@ nav ul {
 
 #splideList {
     display: grid;
-    gap:16px;
+    gap: 32px;
     grid-template-columns: repeat(3,1fr);
 }
 
@@ -371,7 +381,7 @@ nav ul {
 #servicesGrid {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap:16px;
+    gap: 32px;
 }
 
 #servicesGrid figure {
