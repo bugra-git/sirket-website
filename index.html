@@ -73,7 +73,7 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="">Ana Sayfa</a></li>
+                    <li id="currentPage"><a href="">Ana Sayfa</a></li>
                     <li><a href="">Hakkımızda</a></li>
                     <li><a href="">Hizmetlerimiz</a></li>
                     <li><a href="">Projeler</a></li>
@@ -83,12 +83,23 @@
             </nav>
             <button id="ctaButton">Ücretsiz Keşif Al</button>
         </div>
+        <script>
+            const header = document.querySelector('header');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                header.classList.add('scrolled');
+                } else {
+                header.classList.remove('scrolled');
+                }
+            });
+        </script>
     </header>
     <main>
         <section id="hero">
             <h1>Anahtar Teslim Tadilat & Dekorasyon</h1>
             <p>Konut ve ticari alanlar için planlı, sözleşmeli ve garantili tadilat ve dekorasyon çözümleri sunuyoruz.</p>
-            <button>Ücretsiz Keşif Al</button>
+            <button id="ctaButton">Ücretsiz Keşif Al</button>
         </section>
         <section id="about" class="container">
             <h2>Bizi Tanıyın</h2>
