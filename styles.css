@@ -114,7 +114,7 @@ main {
     box-shadow: 0 4px 12px rgba(0,0,0,.1);
 }
 
-#about section article, #process, .testimonial, #servicesGrid figure {
+#about section article, #process, .testimonial, #servicesGrid a {
     background-color: var(--background);
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,.1);
@@ -125,7 +125,7 @@ main {
     box-shadow: 0 4px 12px rgba(0,0,0,.1);
 }
 
-#ctaButton, form button {
+.ctaButton, form button[type="submit"] {
     background-color: var(--theme);
     color: white;
     border: none;
@@ -143,11 +143,29 @@ svg, #project a, #currentPage {
     color: var(--theme);
 }
 
-header:not(.scrolled) > div, nav strong, header:not(.scrolled) #socMediaLinks svg, header:not(.scrolled) #logo strong {
+header:not(.scrolled) > div {
     background: transparent !important;
-    color: white;
-    fill: white;
     box-shadow: none;
+}
+
+header > div {
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+header:not(.scrolled) a, header:not(.scrolled) strong {
+    color: white;
+}
+
+header a, header strong {
+    transition: color 0.3s ease;
+}
+
+header:not(.scrolled) #socMediaLinks svg {
+    fill: white;
+}
+
+header #socMediaLinks svg {
+    transition: fill 0.3s ease;
 }
 
 /* links and lists */
@@ -171,7 +189,7 @@ ul {
 header {
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 header > div {
@@ -256,8 +274,8 @@ nav ul {
     gap: 16px;
 }
 
-#ctaButton {
-    padding: 8px;
+.ctaButton {
+    padding: 8px 16px;
     border-radius: 4px;
 }
 
@@ -384,17 +402,20 @@ nav ul {
     gap: 32px;
 }
 
-#servicesGrid figure {
+#servicesGrid a {
     display: flex;
     gap:16px;
-    height: 100%;
     padding: 16px;
 }
 
-#servicesGrid figure svg {
+#servicesGrid a svg {
     height: 44px;
     width: 44px;
     flex-shrink: 0;
+}
+
+#servicesGrid a strong {
+    display: block;
 }
 
 /* project */
@@ -469,7 +490,7 @@ nav ul {
     background: transparent;
     appearance: none;
     cursor: ew-resize;
-    z-index: 10;
+    z-index: 1;
 }
 
 .project-media .slider::-webkit-slider-runnable-track {
@@ -513,7 +534,7 @@ nav ul {
 
 #project a {
     margin-inline: auto;
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 /* quoteRequest */
@@ -556,4 +577,132 @@ form textarea {
 
 footer {
     text-align: center;
+}
+
+/* interactions */
+#socMediaLinks a {
+    transition: background-color .2s ease, transform .2s ease;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#socMediaLinks a:hover {
+    background-color: white;
+    transform: translateY(-1px);
+}
+
+#socMediaLinks a:focus-visible {
+    padding: 4px;
+    border-radius: 4px;
+}
+
+#socMediaLinks svg {
+    transition: color .25s ease;
+}
+
+#socMediaLinks a:hover svg {
+    fill: var(--socMedColor);
+}
+
+#currentPage::after {
+    transform: scaleX(10);
+}
+
+nav a, #project a {
+    position: relative;
+    padding-block: 4px;
+    transition: color .2s ease;
+}
+
+nav a::after, #project a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .2s ease;
+}
+
+nav a:hover, nav a:hover strong,
+nav a:focus-visible, nav a:hover strong {
+    color: var(--theme);
+}
+
+nav a:hover::after,
+#project a:hover::after,
+nav a:focus-visible::after,
+#project a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.ctaButton {
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.ctaButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,0,0,.15);
+}
+
+.ctaButton:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0,0,0,.2);
+}
+
+.ctaButton:focus-visible {
+    outline: 2px solid var(--theme);
+    outline-offset: 3px;
+}
+
+.nav:hover {
+    background-color: var(--theme);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+.nav:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0,0,0,.2);
+}
+
+
+#about section article, .testimonial {
+    transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#servicesGrid a {
+    transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#about section article:hover, .testimonial:hover, #servicesGrid a:hover,
+#about section article:focus-visible, .testimonial:focus-visible, #servicesGrid a:focus-visible {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+#servicesGrid a:active {
+    background-color: var(--background);
+    transform: translateY(2px);   
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+#process {
+    transition: background-color 0.2s ease;
+}
+
+#process:hover {
+    background-color: white;
 }
