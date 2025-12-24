@@ -573,6 +573,12 @@ form textarea {
     padding-bottom: 16px;
 }
 
+button[type="submit"] {
+    border-radius: 2px;
+    padding-inline: 8px;
+
+}
+
 /* footer */
 
 footer {
@@ -641,22 +647,22 @@ nav a:focus-visible::after,
     transform: scaleX(1);
 }
 
-.ctaButton {
+.ctaButton, button[type="submit"] {
     cursor: pointer;
     transition: transform .15s ease, box-shadow .15s ease;
 }
 
-.ctaButton:hover {
+.ctaButton:hover, button[type="submit"]:hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(0,0,0,.15);
 }
 
-.ctaButton:active {
+.ctaButton:active, button[type="submit"]:active {
     transform: translateY(0);
     box-shadow: 0 3px 8px rgba(0,0,0,.2);
 }
 
-.ctaButton:focus-visible {
+.ctaButton:focus-visible, button[type="submit"]:focus-visible {
     outline: 2px solid var(--theme);
     outline-offset: 3px;
 }
@@ -705,4 +711,30 @@ nav a:focus-visible::after,
 
 #process:hover {
     background-color: white;
+}
+
+/* dialog */
+dialog {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.5);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+#closeBtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px;
+    color: #666;
+}
+
+#closeBtn:hover {
+  color: #000;
 }

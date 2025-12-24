@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <dialog>
+    <dialog closedBy="any" >
         <div class="quoteRequest">
-            <form action="post">
-                <button id="closeBtn">x</button>
+            <form method="post" id="dialogForm">
+                <button type="button" id="closeBtn" aria-label="Close">&times;</button>
                 <label for="header-name">İsim:</label>
-                <input id="header-name" type="text" required>
+                <input autofocus id="header-name" name="name" type="text" required>
                 <label for="header-telNo">Telefon:</label>
-                <input id="header-telNo" type="tel" required>
+                <input id="header-telNo" name="phone" type="tel" required>
                 <label for="header-email">E-mail:</label>
-                <input type="email" id="header-email">
+                <input type="email" id="header-email" name="email">
                 <label for="header-service">Hizmet:</label>
                 <select name="service" id="header-service">
                     <option value="ev-tadilat">Ev tadilatı</option>
@@ -83,17 +83,6 @@
             </nav>
             <button class="ctaButton">Ücretsiz Keşif Al</button>
         </div>
-        <script>
-            const header = document.querySelector('header');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 40) {
-                header.classList.add('scrolled');
-                } else {
-                header.classList.remove('scrolled');
-                }
-            });
-        </script>
     </header>
     <main>
         <section id="hero">
@@ -303,26 +292,16 @@
                 <button class="nav next" style="--pos:start;--col:3">›</button>
             </div>
             <a href="">Daha fazla proje için tıklayın</a>
-            <script>
-                document.querySelectorAll('.project-card').forEach(card => {
-                    const slider = card.querySelector('.slider');
-                    const after = card.querySelector('.after-wrapper');
-
-                    slider.addEventListener('input', e => {
-                        after.style.width = `${100 - e.target.value}%`;
-                    });
-                });
-            </script>
         </article>
         <article class="quoteRequest" id="formMain">
-            <form action="post">
+            <form method="post" id="mainForm">
                 <h3>Ücretsiz keşif alın</h3>
                 <label for="cta-name">İsim:</label>
-                <input id="cta-name" type="text" required>
+                <input id="cta-name" name="name" type="text" required>
                 <label for="cta-telNo">Telefon:</label>
-                <input id="cta-telNo" type="tel" required>
+                <input id="cta-telNo" name="phone" type="tel" required>
                 <label for="cta-email">E-mail:</label>
-                <input type="email" id="cta-email">
+                <input type="email" id="cta-email" name="email">
                 <label for="cta-service">Hizmet:</label>
                 <select name="service" id="cta-service">
                     <option value="ev-tadilat">Ev tadilatı</option>
@@ -361,5 +340,6 @@
     <footer>
         Şirket Website © 2025 | Web Tasarım & Yazılım  Buğra Özcan © Tüm Hakları Saklıdır. | bugra-git.github.io/sirket-website/
     </footer>
+    <script src="script.js" defer></script>
 </body>
 </html>
