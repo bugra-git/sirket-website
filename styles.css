@@ -43,7 +43,7 @@ body {
   src: url(Inter/) format("woff2");
 }
 
-#logoNavCta nav a {
+#logoNavCta nav a, details > summary {
     font-weight: 500;
 }
 
@@ -152,11 +152,11 @@ header > div {
     transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-header:not(.scrolled) a, header:not(.scrolled) strong {
+header:not(.scrolled) a, header:not(.scrolled) strong, header:not(.scrolled) summary {
     color: white;
 }
 
-header a, header strong {
+header a, header strong, summary {
     transition: color 0.3s ease;
 }
 
@@ -169,7 +169,7 @@ header #socMediaLinks svg {
 }
 
 /* links and lists */
-a {
+a, summary {
     color: inherit;
     text-decoration: none;
 }
@@ -616,13 +616,13 @@ footer {
     transform: scaleX(10);
 }
 
-nav a, #project a {
+nav a, #project a, details > summary {
     position: relative;
     padding-block: 4px;
     transition: color .2s ease;
 }
 
-nav a::after, #project a::after {
+nav a::after, #project a::after, details > summary::after {
     content: "";
     position: absolute;
     left: 0;
@@ -635,15 +635,18 @@ nav a::after, #project a::after {
     transition: transform .2s ease;
 }
 
-nav a:hover, nav a:hover strong,
-nav a:focus-visible, nav a:hover strong {
+nav a:hover, nav a:hover strong, details > summary:hover,
+nav a:focus-visible, nav a:focus-visible strong, details > summary:focus-visible strong {
     color: var(--theme);
 }
 
 nav a:hover::after,
 #project a:hover::after,
+details > summary:hover::after,
+details[open] > summary::after,
 nav a:focus-visible::after,
-#project a:focus-visible::after {
+#project a:focus-visible::after,
+summary:focus-visible::after {
     transform: scaleX(1);
 }
 
@@ -736,5 +739,74 @@ dialog::backdrop {
 }
 
 #closeBtn:hover {
-  color: #000;
+    color: #000;
+}
+
+/* hizmetler dropdown */
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+nav ul {
+    align-items: center;
+}
+
+details {
+    position: relative;
+}
+
+details ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 4px;
+    top: calc(100% + 8px);
+    left: 0;
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    padding: 8px;
+    text-align: left;
+}
+
+details ul li {
+    width: 100%;
+}
+
+details ul li a {
+    display: block;
+    transition: background-color 0.2s ease;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+details ul li a:hover {
+    background-color: var(--background);
+}
+
+details ul li a, header:not(.scrolled) details ul li a {
+    color: var(--textColorStrong) ;
+}
+
+header:not(.scrolled) details ul li:hover a {
+    color: var(--theme);
+}
+
+nav a,
+details > summary {
+    line-height: 1.2;
+}
+
+details[open] > summary {
+    color: var(--theme);
+}
+
+details[open] > summary::after {
+    transform: scaleX(1);
 }
