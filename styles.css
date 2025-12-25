@@ -810,3 +810,11 @@ details[open] > summary {
 details[open] > summary::after {
     transform: scaleX(1);
 }
+
+details > summary {
+    display: flex;
+}
+
+details summary svg {
+    color: inherit !important;
+}
